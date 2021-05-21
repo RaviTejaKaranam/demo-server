@@ -117,7 +117,7 @@ app.delete("/delete-user/:id", async (req, res)=>{
       client.close()
     }
 })
-const port = 3010
+const port = process.env.PORT || 3010
 
 app.listen(port, ()=>{
   console.log("Server started")
